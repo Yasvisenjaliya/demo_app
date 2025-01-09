@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-03 12:44:24.888644",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_dpgj",
+  "student_type",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_dpgj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "student_type",
+   "fieldtype": "Data",
+   "label": "\tStudent Type"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "\tDescription"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-03 12:45:48.104865",
+ "modified_by": "Administrator",
+ "module": "Programing Module",
+ "name": "Student Type",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

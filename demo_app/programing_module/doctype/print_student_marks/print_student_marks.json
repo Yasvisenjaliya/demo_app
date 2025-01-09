@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-05 15:28:15.349461",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_bcej",
+  "student_name",
+  "roll_number",
+  "class",
+  "school",
+  "subject_marks",
+  "total_marks",
+  "maximum_marks",
+  "percentage"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_bcej",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name"
+  },
+  {
+   "fieldname": "roll_number",
+   "fieldtype": "Data",
+   "label": "Roll Number"
+  },
+  {
+   "fieldname": "class",
+   "fieldtype": "Data",
+   "label": "Class"
+  },
+  {
+   "fieldname": "school",
+   "fieldtype": "Data",
+   "label": "School"
+  },
+  {
+   "fieldname": "subject_marks",
+   "fieldtype": "Table",
+   "label": "Subject Marks",
+   "options": "Print Subject Marks"
+  },
+  {
+   "fieldname": "total_marks",
+   "fieldtype": "Int",
+   "label": "Total Marks"
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Int",
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "maximum_marks",
+   "fieldtype": "Float",
+   "label": "Maximum Marks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-05 17:55:56.114836",
+ "modified_by": "Administrator",
+ "module": "Programing Module",
+ "name": "Print Student Marks",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

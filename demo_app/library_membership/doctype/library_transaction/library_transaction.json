@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-07 14:41:25.718126",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_sdmp",
+  "article",
+  "library_member",
+  "column_break_inm5",
+  "type",
+  "date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_sdmp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "article",
+   "fieldtype": "Link",
+   "label": "Article",
+   "options": "Article Library"
+  },
+  {
+   "fieldname": "library_member",
+   "fieldtype": "Link",
+   "label": "Library Member",
+   "options": "Library Member"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Issue\nReturn"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Library Transaction",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_inm5",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-07 14:53:25.388527",
+ "modified_by": "Administrator",
+ "module": "Library Membership",
+ "name": "Library Transaction",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

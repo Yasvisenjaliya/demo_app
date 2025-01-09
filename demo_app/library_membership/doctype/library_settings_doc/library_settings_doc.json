@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-07 14:59:18.834875",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_xxtz",
+  "loan_period",
+  "column_break_qdr4",
+  "maximum_number_of_issued_articles"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_xxtz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "loan_period",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Loan Period",
+   "reqd": 1
+  },
+  {
+   "fieldname": "maximum_number_of_issued_articles",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Maximum Number Of Issued Articles",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qdr4",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-01-07 15:03:21.003500",
+ "modified_by": "Administrator",
+ "module": "Library Membership",
+ "name": "Library Settings Doc",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
