@@ -1,0 +1,304 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PR-.###",
+ "creation": "2025-01-03 10:02:18.913201",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ijqp",
+  "enrolled",
+  "student_name",
+  "student_email",
+  "profile_picture",
+  "id_card",
+  "barcode",
+  "field_break_column",
+  "dob",
+  "enrollment_time",
+  "enrollment_date__time",
+  "fees",
+  "section_break_rdmr",
+  "address",
+  "tab_break_o2l8",
+  "percentage",
+  "grade",
+  "is_active",
+  "marks",
+  "cgpa",
+  "gender",
+  "skills",
+  "profile_color",
+  "student_icon",
+  "column_break_gjfs",
+  "notes",
+  "signature",
+  "column_break_qzam",
+  "rating",
+  "password",
+  "short_description",
+  "biography",
+  "section_break_54dc",
+  "additional_info",
+  "programming_code",
+  "geolocation",
+  "documents_tab",
+  "documents",
+  "action_button",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ijqp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "enrolled",
+   "fieldtype": "Check",
+   "label": "\tEnrolled"
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name",
+   "search_index": 1
+  },
+  {
+   "fieldname": "student_email",
+   "fieldtype": "Data",
+   "label": "\tStudent Email"
+  },
+  {
+   "fieldname": "profile_picture",
+   "fieldtype": "Attach Image",
+   "label": "Profile Picture"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "id_card",
+   "fieldtype": "Attach",
+   "label": "ID Card"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "barcode",
+   "fieldtype": "Barcode",
+   "label": "Barcode"
+  },
+  {
+   "fieldname": "field_break_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "address",
+   "fieldtype": "Long Text",
+   "label": "\tAddress"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "enrollment_time",
+   "fieldtype": "Time",
+   "label": "Enrollment Time"
+  },
+  {
+   "fieldname": "enrollment_date__time",
+   "fieldtype": "Datetime",
+   "label": "\tEnrollment Date  Time"
+  },
+  {
+   "fieldname": "fees",
+   "fieldtype": "Currency",
+   "label": "Fees"
+  },
+  {
+   "fieldname": "tab_break_o2l8",
+   "fieldtype": "Tab Break"
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "label": "\tPercentage"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Select",
+   "label": "Grade",
+   "options": "A\nB\nC\nD"
+  },
+  {
+   "default": "Yes",
+   "fieldname": "is_active",
+   "fieldtype": "Data",
+   "label": "\tIs Active",
+   "mandatory_depends_on": "eval:doc.grade==\"A\"",
+   "read_only_depends_on": "eval:doc.grade==\"A\""
+  },
+  {
+   "fieldname": "marks",
+   "fieldtype": "Int",
+   "label": "Marks"
+  },
+  {
+   "fieldname": "cgpa",
+   "fieldtype": "Float",
+   "label": "CGPA"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nOther"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "skills",
+   "fieldtype": "Table MultiSelect",
+   "label": "Skills ",
+   "options": "Skill Doctype"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "documents",
+   "fieldtype": "Table",
+   "label": "Documents",
+   "options": "Document Doctype"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "profile_color",
+   "fieldtype": "Color",
+   "label": "Profile Color"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "student_icon",
+   "fieldtype": "Icon",
+   "label": "\tStudent Icon"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "notes",
+   "fieldtype": "Markdown Editor",
+   "label": "Notes"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "\tSignature"
+  },
+  {
+   "fieldname": "geolocation",
+   "fieldtype": "Geolocation",
+   "label": "Geolocation"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "\tRating",
+   "options": "5"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "short_description",
+   "fieldtype": "Small Text",
+   "label": "Short Description"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "biography",
+   "fieldtype": "Text Editor",
+   "label": "Biography"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "additional_info",
+   "fieldtype": "Text",
+   "label": "Additional Info"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "programming_code",
+   "fieldtype": "Code",
+   "label": "Programming Code",
+   "options": "python"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Demo Doc",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "action_button",
+   "fieldtype": "Button",
+   "label": "Action Button",
+   "options": "\n"
+  },
+  {
+   "fieldname": "column_break_gjfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qzam",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_54dc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "documents_tab",
+   "fieldtype": "Tab Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "section_break_rdmr",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-03 16:55:19.762473",
+ "modified_by": "Administrator",
+ "module": "Programing Module",
+ "name": "Demo Doc",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

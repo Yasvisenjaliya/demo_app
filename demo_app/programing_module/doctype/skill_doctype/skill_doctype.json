@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-03 11:44:24.837801",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ddbn",
+  "students_family",
+  "skill_name",
+  "proficiency",
+  "experience"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ddbn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "skill_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Skill_name"
+  },
+  {
+   "fieldname": "proficiency",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Proficiency"
+  },
+  {
+   "fieldname": "experience",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Experience"
+  },
+  {
+   "fieldname": "students_family",
+   "fieldtype": "Link",
+   "label": "Students Family",
+   "options": "Family Members"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-03 12:16:09.467602",
+ "modified_by": "Administrator",
+ "module": "Programing Module",
+ "name": "Skill Doctype",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

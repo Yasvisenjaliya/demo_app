@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-05 14:00:00.201856",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_grzd",
+  "marks_table",
+  "total_marks",
+  "maximum_marks",
+  "percentage",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_grzd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "marks_table",
+   "fieldtype": "Table",
+   "label": "Marks Table",
+   "options": "Server Marks Details"
+  },
+  {
+   "fieldname": "total_marks",
+   "fieldtype": "Float",
+   "label": "Total Marks"
+  },
+  {
+   "fieldname": "maximum_marks",
+   "fieldtype": "Float",
+   "label": "Maximum Marks"
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Float",
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Server Student Marks",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-05 14:35:43.751010",
+ "modified_by": "Administrator",
+ "module": "Programing Module",
+ "name": "Server Student Marks",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
