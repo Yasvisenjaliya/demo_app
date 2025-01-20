@@ -12,4 +12,5 @@ def add_custom_fields():
             "insert_after": "customer_group",  
             "read_only": 1 
         }).insert()
+        
 add_custom_fields()
