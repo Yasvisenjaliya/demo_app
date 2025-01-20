@@ -1,25 +1,43 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-01-05 11:46:15.836983",
+ "creation": "2025-01-09 14:26:44.473586",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "image"
+  "first_name",
+  "middle_name",
+  "last_name",
+  "email"
  ],
  "fields": [
   {
-   "fieldname": "image",
-   "fieldtype": "Image",
-   "label": "image"
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-20 14:08:54.875307",
+ "modified": "2025-01-09 14:28:04.013954",
  "modified_by": "Administrator",
  "module": "Programing Module",
- "name": "Student Doc",
+ "name": "Student",
  "owner": "Administrator",
  "permissions": [
   {
