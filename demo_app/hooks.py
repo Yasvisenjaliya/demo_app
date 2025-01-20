@@ -148,29 +148,29 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-scheduler_events = {
+# scheduler_events = {
 
-    "cron": {
-        "* * * * *": [
-            "demo_app.tasks.cron"
-        ]
-    },
-	"all": [
-		"demo_app.tasks.all"
-	],
-	"daily": [
-		"demo_app.tasks.daily"
-	],
-	"hourly": [
-		"demo_app.tasks.hourly"
-	],
-	"weekly": [
-		"demo_app.tasks.weekly"
-	],
-	"monthly": [
-		"demo_app.tasks.monthly"
-	],
-}
+#     "cron": {
+#         "* * * * *": [
+#             "demo_app.tasks.cron"
+#         ]
+#     },
+# 	"all": [
+# 		"demo_app.tasks.all"
+# 	],
+# 	"daily": [
+# 		"demo_app.tasks.daily"
+# 	],
+# 	"hourly": [
+# 		"demo_app.tasks.hourly"
+# 	],
+# 	"weekly": [
+# 		"demo_app.tasks.weekly"
+# 	],
+# 	"monthly": [
+# 		"demo_app.tasks.monthly"
+# 	],
+# }
 
 # Testing
 # -------
@@ -187,11 +187,36 @@ scheduler_events = {
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
-# override_doctype_dashboards = {
-# 	"Task": "demo_app.task.get_dashboard_data"
+# override_doctype_class = {
+# 	# "Task": "demo_app.task.get_dashboard_data"
+#     "Student": "demo_app.programing_module.override.DCODEStudent",
 # }
 
-# exempt linked doctypes from being automatically cancelled
+after_migrate = "demo_app.programing_module.setup.add_custom_fields"
+
+
+
+# doc_events = {
+#     "Customize Student Doc": {
+#         "validate": "demo_app.programing_module.events.validate_student"
+#     }
+# }
+# /home/yasvi/frappe-bench/apps/demo_app/demo_app/hooks.py
+doc_events = {
+    "Customer": {
+        "before_save": "demo_app.programing_module.override.customer_count"  # Correct path to your function
+    }
+}
+
+# Include JS file in the app
+doctype_js = {
+    "Customer": "public/js/customer_action_buttons.js"  # Path to your JS file
+}
+
+
+
+# exempt linked doctypes from being automatical
+# ly cancelled
 #
 # auto_cancel_exempted_doctypes = ["Auto Repeat"]
 
@@ -248,3 +273,6 @@ scheduler_events = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+    "Library Member",
+]
