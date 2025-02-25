@@ -1,0 +1,11 @@
+
+.web-form-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.web-form-footer button {
+    font-size: 16px;
+    border-radius: 5px;
+}

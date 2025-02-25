@@ -1,0 +1,40 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2025-02-03 12:52:02.937897",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Property",
+ "enabled": 1,
+ "event": "Save",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>your workflow is {{doc.workflow_state}}</p>\n",
+ "message_type": "Markdown",
+ "modified": "2025-02-03 15:27:49.973420",
+ "modified_by": "Administrator",
+ "module": "Programing Module",
+ "name": "Property",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "condition": "doc.workflow_state == 'Draft'",
+   "receiver_by_role": "Property User"
+  },
+  {
+   "condition": "doc.workflow_state == 'Pending Approval'",
+   "receiver_by_role": "Property Manager"
+  },
+  {
+   "condition": "doc.workflow_state == 'Pending CEO Approval'",
+   "receiver_by_role": "Property CEO"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "Patelyasu637",
+ "sender_email": "patelyasu637@gmail.com",
+ "subject": "Property Workflow: {{ doc.name }}{{ doc.workflow_state }}",
+ "value_changed": "workflow_state"
+}

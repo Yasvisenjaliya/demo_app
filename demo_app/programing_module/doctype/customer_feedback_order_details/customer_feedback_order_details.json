@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-18 15:21:33.630684",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_tszb",
+  "item_ordered",
+  "how_did_you_place_the_order",
+  "payment_mode",
+  "order_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_tszb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_ordered",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Ordered "
+  },
+  {
+   "fieldname": "how_did_you_place_the_order",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "How did you place the order?",
+   "options": "Online\nOn-phone\nIn-person"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Mode",
+   "options": "Advance Payment by Cash\nAdvance online payment\nCOD\nOnline payment on delivery"
+  },
+  {
+   "fieldname": "order_value",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Order Value",
+   "permlevel": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-18 16:42:09.664031",
+ "modified_by": "Administrator",
+ "module": "Programing Module",
+ "name": "Customer Feedback Order Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

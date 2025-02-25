@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "PR-###",
+ "autoname": "CS-.###",
  "creation": "2025-01-02 12:19:00.353814",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -33,6 +33,7 @@
    "label": "Enable"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "first_name",
    "fieldtype": "Data",
    "label": "First Name"
@@ -72,6 +73,7 @@
    "label": "DOB"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "age",
    "fieldtype": "Int",
    "label": "Age"
@@ -98,9 +100,8 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2025-01-02 12:32:29.602763",
+ "modified": "2025-01-23 20:08:54.942193",
  "modified_by": "Administrator",
  "module": "Programing Module",
  "name": "Client Side Scripting",

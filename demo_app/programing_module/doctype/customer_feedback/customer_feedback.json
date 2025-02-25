@@ -1,0 +1,170 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:CRM-{MM}-{YYYY}-{####}",
+ "creation": "2025-02-18 12:14:31.220526",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_pob1",
+  "customer",
+  "rating",
+  "account_manager",
+  "chech_all_the_unsatisfactory_services_section",
+  "staff_friendliness",
+  "reason",
+  "column_break_repx",
+  "product_quality",
+  "product_reason",
+  "column_break_xihc",
+  "delivery_services",
+  "delivery_reason",
+  "column_break_ioca",
+  "value_for_money",
+  "my_reason",
+  "order_details_section",
+  "table_vdxr"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_pob1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "label": "Customer "
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "in_list_view": 1,
+   "label": "Rating",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "account_manager",
+   "fieldtype": "Link",
+   "label": "Account Manager ",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "chech_all_the_unsatisfactory_services_section",
+   "fieldtype": "Section Break",
+   "label": "Chech All The Unsatisfactory services "
+  },
+  {
+   "default": "0",
+   "fieldname": "staff_friendliness",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Staff Friendliness ",
+   "search_index": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Data",
+   "label": "Reason",
+   "mandatory_depends_on": "staff_friendliness"
+  },
+  {
+   "fieldname": "column_break_repx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "product_quality",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Product Quality "
+  },
+  {
+   "depends_on": "product_quality",
+   "fieldname": "product_reason",
+   "fieldtype": "Data",
+   "label": "Reason",
+   "mandatory_depends_on": "product_quality ",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_xihc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "delivery_services",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Delivery Services ",
+   "search_index": 1
+  },
+  {
+   "depends_on": "delivery_services",
+   "fieldname": "delivery_reason",
+   "fieldtype": "Data",
+   "label": "Reason",
+   "mandatory_depends_on": "delivery_services ",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_ioca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "value_for_money",
+   "fieldtype": "Check",
+   "label": "Value For Money "
+  },
+  {
+   "depends_on": "value_for_money",
+   "fieldname": "my_reason",
+   "fieldtype": "Data",
+   "label": "Reason ",
+   "mandatory_depends_on": "value_for_money\n",
+   "search_index": 1
+  },
+  {
+   "fieldname": "order_details_section",
+   "fieldtype": "Section Break",
+   "label": "Order Details "
+  },
+  {
+   "fieldname": "table_vdxr",
+   "fieldtype": "Table",
+   "options": "Customer Feedback Order Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Task",
+   "link_fieldname": "custom_feedback_"
+  }
+ ],
+ "modified": "2025-02-18 16:41:56.788017",
+ "modified_by": "Administrator",
+ "module": "Programing Module",
+ "name": "Customer Feedback",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "customer"
+}

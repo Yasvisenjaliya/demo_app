@@ -1,0 +1,46 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2025-01-24 11:07:07.183649",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Subject",
+   "mandatory": 1,
+   "options": "Subject",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "mandatory": 1,
+   "options": "Student",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Test Letter  Head",
+ "letterhead": null,
+ "modified": "2025-01-27 12:33:21.185193",
+ "modified_by": "Administrator",
+ "module": "Programing Module",
+ "name": "Student Query Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\r\n    s.first_name AS \"First Name\",\r\n    s.middle_name AS \"Middle Name\",\r\n    s.last_name AS \"Last Name\",\r\n    s.email AS \"E-mail\",\r\n    s.grade AS \"Grade\",\r\n    sub.subject_name AS \"Subject Name\",\r\n    sub.subject_code AS \"Subject Code\"\r\nFROM\r\n    `tabStudent` s\r\nLEFT JOIN\r\n    `tabSubject` sub ON sub.subject_name = s.subject\r\nWHERE\r\n    (%(student)s IS NULL OR s.first_name = %(student)s)\r\n    AND (%(subject)s IS NULL OR sub.subject_name = %(subject)s)\r\n",
+ "ref_doctype": "Student",
+ "report_name": "Student Query Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}

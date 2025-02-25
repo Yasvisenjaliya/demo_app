@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-06 23:46:38.742054",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_sexe",
+  "student_name",
+  "email",
+  "phone_number",
+  "student_course_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_sexe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number "
+  },
+  {
+   "fieldname": "student_course_details",
+   "fieldtype": "Table",
+   "label": "Student Course Details",
+   "options": "Student Course Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-06 23:48:08.556855",
+ "modified_by": "Administrator",
+ "module": "Programing Module",
+ "name": "Create Student Record",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

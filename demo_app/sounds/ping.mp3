@@ -1,0 +1,5 @@
+frappe.ui.notifications.notify({
+    message: "Notification sent",
+    indicator: "green",
+    sound: "ping"  
+});

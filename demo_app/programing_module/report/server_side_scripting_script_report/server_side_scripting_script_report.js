@@ -5,18 +5,18 @@ frappe.query_reports["Server Side Scripting Script Report"] = {
 	"filters": [
 		{
 			"fieldname": "name",
-			"label": ("Server Side Scripting"),
+			"label": "Server Side Scripting",
 			"fieldtype": "Link",
 			"options": "Server Side Scripting"
 		},
 		{
 			"fieldname": "dob",
-			"label": ("DOB"),
+			"label": "DOB",
 			"fieldtype": "Date",
 		},
 		{
 			"fieldname": "age",
-			"label": ("Age"),
+			"label": "Age",
 			"fieldtype": "Int",
 		}
 

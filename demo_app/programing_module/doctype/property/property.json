@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": ".####",
+ "creation": "2025-02-03 10:34:25.936010",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_tfzm",
+  "property_name",
+  "city",
+  "property_type",
+  "email",
+  "property_price",
+  "discount",
+  "address",
+  "agent",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_tfzm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "label": "Property Name"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "property_type",
+   "fieldtype": "Data",
+   "label": "Property Type"
+  },
+  {
+   "fieldname": "property_price",
+   "fieldtype": "Currency",
+   "label": "Property Price",
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "discount",
+   "fieldtype": "Percent",
+   "label": "Discount "
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address "
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Property",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "agent",
+   "fieldtype": "Data",
+   "label": "Agent"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-03 16:57:40.889673",
+ "modified_by": "Administrator",
+ "module": "Programing Module",
+ "name": "Property",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,9 @@
+
+/* li.dropdown.dropdown.help.dropdown-mobile{
+    display:none;
+} */
+
+
+.dropdown-help {
+    display: none !important;
+}

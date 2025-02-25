@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "STU-.###",
  "creation": "2025-01-09 14:26:44.473586",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -8,7 +9,11 @@
   "first_name",
   "middle_name",
   "last_name",
-  "email"
+  "full_name",
+  "email",
+  "grade",
+  "status",
+  "subject"
  ],
  "fields": [
   {
@@ -30,14 +35,38 @@
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Select",
+   "label": "Grade",
+   "options": "A\nB\nC"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Subject",
+   "options": "Student Subject Enrollment"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nActive\nInactive"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-09 14:28:04.013954",
+ "modified": "2025-02-21 11:59:38.753115",
  "modified_by": "Administrator",
  "module": "Programing Module",
  "name": "Student",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -53,7 +82,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "full_name"
 }

@@ -6,6 +6,14 @@ app_email = "administrator@sigzen.com"
 app_license = "mit"
 
 # Apps
+
+# from demo_app.config.config import test_string, test_list, test_dict
+
+# print(test_string)
+# print(test_list)
+# print(test_dict)
+
+
 # ------------------
 
 # required_apps = []
@@ -26,27 +34,36 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/demo_app/css/demo_app.css"
-# app_include_js = "/assets/demo_app/js/demo_app.js"
+app_include_js = "/assets/demo_app/js/demo_app.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/demo_app/css/demo_app.css"
+# web_include_css = "/assets/demo_app/css/custom_style.css"
 # web_include_js = "/assets/demo_app/js/demo_app.js"
+# web_routes = [
+#     {"from_route": "/custom_page", "to_route": "custom_page"}
+# ]
+
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "demo_app/public/scss/website"
 
 # include js, css files in header of web form
-# webform_include_js = {"doctype": "public/js/doctype.js"}
-# webform_include_css = {"doctype": "public/css/doctype.css"}
+# webform_include_js = {"Student Form": "public/js/student.js"}
+# webform_include_css = {"Student Form": "public/css/student.css"}
 
 # include js in page
-# page_js = {"page" : "public/js/file.js"}
+# page_js = {"student-web-form" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
-# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
-# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+# doctype_js = {"Student" : "public/js/demo_app.js"}
+# doctype_list_js = {"Student" : "public/js/demo_app.js"}
+# doctype_tree_js = {"Employee" : "public/js/demo_app.js"}
+# doctype_calendar_js = {"Task" : "public/js/demo_app.js"}
+
+doctype_list_js = {
+    "Student": "public/js/student_list.js",
+    "Customer": "public/js/customer_list.js"
+}
 
 # Svg Icons
 # ------------------
@@ -75,8 +92,8 @@ app_license = "mit"
 
 # add methods and filters to jinja environment
 # jinja = {
-# 	"methods": "demo_app.utils.jinja_methods",
-# 	"filters": "demo_app.utils.jinja_filters"
+	# "methods": "demo_app.utils.jinja_methods",
+	# "filters": "demo_app.utils.jinja_filters"
 # }
 
 # Installation
@@ -107,6 +124,7 @@ app_license = "mit"
 # before_app_uninstall = "demo_app.utils.before_app_uninstall"
 # after_app_uninstall = "demo_app.utils.after_app_uninstall"
 
+
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
@@ -133,6 +151,14 @@ app_license = "mit"
 # 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
+
+
+# demo_app/hooks.py
+
+
+
+
+
 # Document Events
 # ---------------
 # Hook on document methods and events
@@ -144,6 +170,44 @@ app_license = "mit"
 # 		"on_trash": "method"
 # 	}
 # }
+
+
+# doc_events = {
+#     "Server Side Scripting": {
+#         "validate": "demo_app.programing_module.doctype.server_side_scripting.events.send_email_on_validate"
+#     }
+# }
+
+# doc_events = {
+#     "Customize Student Doc": {
+#         "validate": "demo_app.programing_module.events.validate_student"
+#     }
+# }
+# /home/yasvi/frappe-bench/apps/demo_app/demo_app/hooks.py
+# doc_events = {
+#     "Customer": {
+#         "before_save": "demo_app.programing_module.override.customer_count"  
+#     }
+# }
+
+# doc_events = {
+#     "Customer": {
+#         "on_update": "demo_app.customer_event.override_customer_on_update"
+#     }
+# }
+
+
+
+
+
+# DocType event hooks
+# doc_events = {
+#     "Create Student Record": {
+#         "on_update": "demo_app.programming_module.doctype.create_student_record.create_student_record.create_student_with_courses"
+#     }
+# }
+
+
 
 # Scheduled Tasks
 # ---------------
@@ -172,6 +236,13 @@ app_license = "mit"
 # 	],
 # }
 
+
+scheduler_events = {
+    "daily": [
+        "demo_app.scheduler.daily_sequence_check"
+    ]
+}
+
 # Testing
 # -------
 
@@ -196,21 +267,11 @@ after_migrate = "demo_app.programing_module.setup.add_custom_fields"
 
 
 
-# doc_events = {
-#     "Customize Student Doc": {
-#         "validate": "demo_app.programing_module.events.validate_student"
-#     }
-# }
-# /home/yasvi/frappe-bench/apps/demo_app/demo_app/hooks.py
-doc_events = {
-    "Customer": {
-        "before_save": "demo_app.programing_module.override.customer_count"  # Correct path to your function
-    }
-}
+
 
 # Include JS file in the app
 doctype_js = {
-    "Customer": "public/js/customer_action_buttons.js"  # Path to your JS file
+    "Customer": "public/js/customer_action_buttons.js"  
 }
 
 
@@ -276,3 +337,43 @@ doctype_js = {
 fixtures = [
     "Library Member",
 ]
+
+
+# sounds = [
+#     {
+#         "name": "ping", 
+#         "src": "/assets/demo_app/sounds/ping.mp3",  # Correct path
+#         "volume": 0.2  # Optional volume setting
+#     }
+# ]
+
+
+# demo_app/hooks.py
+
+# override_email_send = "demo_app.email.send_custom_email"
+
+
+# demo_app/hooks.py
+
+# email_append_to = "demo_app.email.send_custom_email"
+
+# demo_app/hooks.py
+
+# override_email_send = "demo_app.email.send_custom_email"
+
+# demo_app/hooks.py
+
+# get_sender_details = "demo_app.email.get_sender_details"
+
+
+app_include = [
+    "demo_app.api.student.create_student_with_subjects"
+]
+
+
+api = {
+    "methods": [
+        {"method": "demo_app.api.customer.get_customers", "type": "GET"}
+    ]
+}
+
